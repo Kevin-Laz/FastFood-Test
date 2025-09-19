@@ -29,7 +29,6 @@ El sistema permite mostrar el menú, agregar productos al pedido, ver el resumen
 - Menú categorizado con nombre y precio.  
 
 ### ⚙️ Funcionalidades
-- 🔐 **Autenticación** de usuarios.  
 - 📱 **Responsive** optimizado para tablets.  
 - 👆 **Botones grandes y táctiles** para pantallas touch.  
 
@@ -38,18 +37,8 @@ El sistema permite mostrar el menú, agregar productos al pedido, ver el resumen
 ## 🛠️ Desarrollo
 
 - Aplicación **SPA** con **React, Vue o Angular**.  
-- Backend: **Node.js, PHP o Firebase**.  
+- Backend: **Node.js, PHP o Firebase, Backend de preferencia**.  
 - Almacenamiento: archivo **JSON** (si no es necesaria persistencia permanente).  
-
-### 📂 Estructura
-- `components/` → Componentes de la interfaz.  
-- `logic/` → Lógica de negocio.  
-- Tests para cubrir la funcionalidad básica.  
-
-### 🔧 Herramientas
-- **npm-scripts**  
-- **Webpack**  
-- **Babel**  
 
 ---
 
@@ -58,6 +47,14 @@ El sistema permite mostrar el menú, agregar productos al pedido, ver el resumen
 - 📌 Código subido a **GitHub** (Fork del proyecto).  
 - 🌐 Deploy en **GitHub Pages, Vercel o Netlify**.  
 - 📝 Archivo `README.md` con instrucciones de instalación y uso.  
+
+⚠️ **Nota importante:**  
+No es necesario completar la prueba al **100%**. Se evaluará sobre todo:  
+- 💡 El desempeño.  
+- 🙌 Las ganas y la intención.  
+- ⚙️ El avance logrado hasta el momento.  
+
+El entregable debe estar listo a más tardar el **miércoles 24 de septiembre**.  
 
 ---
 
@@ -69,20 +66,10 @@ El sistema permite mostrar el menú, agregar productos al pedido, ver el resumen
 
 ### 🔹 Código
 - Código **organizado** y **estructurado** en JavaScript.  
-- **Pruebas** cubriendo al menos el **70%** de las funciones.  
 
 ### 🔹 Usabilidad
 - Interfaz simple y atractiva.  
 - Botones grandes y fáciles de usar en pantallas táctiles.  
-
----
-
-## ⚡ Requerimientos Técnicos
-
-- 📈 **Performance** mínimo del **70%**.  
-- 📲 **PWA** (Progressive Web App).  
-- ♿ **Accesibilidad** según estándares.  
-
 ---
 
 ## 🚀 Instalación y Uso
