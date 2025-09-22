@@ -54,8 +54,6 @@ No es necesario completar la prueba al **100%**. Se evaluará sobre todo:
 - 🙌 Las ganas y la intención.  
 - ⚙️ El avance logrado hasta el momento.  
 
-El entregable debe estar listo a más tardar el **miércoles 24 de septiembre**.  
-
 ---
 
 ## 🧪 Evaluación
