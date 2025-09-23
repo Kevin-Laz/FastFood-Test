@@ -1,0 +1,10 @@
+# Node
+node_modules/
+dist/
+build/
+npm-debug.log*
+
+# Env
+.env
+.env.local
+.env.*.local
