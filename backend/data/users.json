@@ -1,0 +1,4 @@
+[
+  { "id": 1, "username": "chef", "password": "$2a$12$kQkWy1IWAWxXZy0I5TA8.OX9FDy1YEwjghykfDuDsj9LNbzIc5oIe", "role": "cook" },
+  { "id": 2, "username": "admin", "password": "$2a$12$6AdwGWd0ctBwqUNc6W9VjuFBgJ/fTeMIzPDXN/Gbcm92crqYX29Qa", "role": "admin" }
+]

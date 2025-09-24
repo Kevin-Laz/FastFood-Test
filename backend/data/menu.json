@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Hamburguesa",
+    "price": 12.5,
+    "category": "burgers"
+  },
+  {
+    "id": 2,
+    "name": "Papas Fritas",
+    "price": 5,
+    "category": "sides"
+  },
+  {
+    "id": 3,
+    "name": "Gaseosa",
+    "price": 3,
+    "category": "drinks"
+  }
+]
