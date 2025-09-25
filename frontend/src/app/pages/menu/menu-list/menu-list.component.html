@@ -4,6 +4,7 @@
   <div class="menu-list__grid">
     @for (menu of pagedDishes; track $index) {
       <app-menu-item
+        [id]="menu.id"
         [category]="menu.category"
         [name]="menu.name"
         [price]="menu.price"

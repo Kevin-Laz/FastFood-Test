@@ -2,17 +2,23 @@
   <h3>Resumen</h3>
 
   <ul class="menu-summary__items">
-    <li>
-      <span>Hamburguesa (x{{ 2 }})</span>
-      <span>{{ 11 }}</span>
+    @for (item of cart.items(); track $index) {
+      <li>
+      <span>{{ item.item.name }} (x{{ item.quantity }})</span>
+      <span>S/. {{ item.item.price * item.quantity }}</span>
     </li>
+    }
   </ul>
 
-  <div class="menu-summary__footer">
-    <div class="total">
-      <span>Total:</span>
-      <strong>{{ 16 }}</strong>
+  @if(cart.totalQuantity() >0){
+    <div class="menu-summary__footer">
+      <div class="total">
+        <span>Total:</span>
+        <strong>S/. {{ cart.totalPrice() }}</strong>
+      </div>
+      <button class="menu-summary__btn" (click)="realizarPedido()">Realizar pedido</button>
     </div>
-    <button class="menu-summary__btn">Realizar pedido</button>
-  </div>
+  }
+
+
 </div>
