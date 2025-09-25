@@ -1,0 +1,43 @@
+.menu-dashboard {
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  //Responsive: en móvil
+  @media (max-width: 524px) {
+    height: 140vh;
+  }
+
+  &__list {
+    flex: 2;
+    max-width: 40rem;
+  }
+
+  &__summary {
+    margin-right: 0.5rem;
+    margin-top: 4rem;
+    width: 9rem;
+    background: #eadcccd4;
+    border-radius: 12px;
+    padding: 1rem;
+    color: #C07531;
+
+    @media (max-width: 524px) {
+      margin-top: 1rem;
+    }
+  }
+}
+
+//Responsive: en móvil el resumen pasa abajo
+@media (max-width: 524px) {
+  .menu-dashboard {
+    flex-direction: column;
+
+    &__list,
+    &__summary {
+      width: 80%;
+    }
+  }
+}
