@@ -5,3 +5,8 @@ export interface MenuItem {
   category: string;
   img?: string;
 }
+
+export interface CartItem {
+  item: MenuItem;
+  quantity: number;
+}
