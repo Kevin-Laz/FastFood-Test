@@ -16,7 +16,7 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
 
     if (!username || !password) throw new AppError("Usuario y contraseña son requeridos", 400);
 
-    const users = readJSON<User[]>(FILE_NAME);
+    const users = await readJSON<User[]>(FILE_NAME);
     const user = users.find((u) => u.username === username);
 
     if (!user) throw new AppError("Credenciales inválidas", 401);

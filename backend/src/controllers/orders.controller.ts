@@ -8,18 +8,18 @@ import { MenuItem } from "../interfaces/menu.interface";
 const FILE_NAME = "orders.json";
 const MENU_FILE = "menu.json";
 
-export const getOrders = (_req: Request, res: Response, next: NextFunction) => {
+export const getOrders = async (_req: Request, res: Response, next: NextFunction) => {
   try {
-    const orders = readJSON<Order[]>(FILE_NAME);
+    const orders = await readJSON<Order[]>(FILE_NAME);
     res.json(orders);
   } catch (error) {
     next(error);
   }
 };
 
-export const getOrderById = (req: Request, res: Response, next: NextFunction) => {
+export const getOrderById = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const orders = readJSON<Order[]>(FILE_NAME);
+    const orders = await readJSON<Order[]>(FILE_NAME);
     const orderId = parseInt(req.params.id, 10);
     const order = orders.find((o) => o.id === orderId);
 
@@ -31,10 +31,10 @@ export const getOrderById = (req: Request, res: Response, next: NextFunction) =>
   }
 };
 
-export const createOrder = (req: Request, res: Response, next: NextFunction) => {
+export const createOrder = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const orders = readJSON<Order[]>(FILE_NAME);
-    const menu = readJSON<MenuItem[]>(MENU_FILE);
+    const orders = await readJSON<Order[]>(FILE_NAME);
+    const menu = await readJSON<MenuItem[]>(MENU_FILE);
 
     const items: OrderItem[] = req.body.items || [];
 
@@ -75,9 +75,9 @@ export const createOrder = (req: Request, res: Response, next: NextFunction) => 
   }
 };
 
-export const updateOrderStatus = (req: Request, res: Response, next: NextFunction) => {
+export const updateOrderStatus = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const orders = readJSON<Order[]>(FILE_NAME);
+    const orders = await readJSON<Order[]>(FILE_NAME);
     const orderId = parseInt(req.params.id, 10);
     const order = orders.find((o) => o.id === orderId);
 
