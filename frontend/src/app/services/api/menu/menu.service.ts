@@ -34,7 +34,7 @@ export class MenuService {
   }
 
   // Eliminar producto
-  deleteMenuItem(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  deleteMenuItem(id: number): Observable<{ message: string }> {
+    return this.http.delete<{ message: string }>(`${this.apiUrl}/${id}`);
   }
 }

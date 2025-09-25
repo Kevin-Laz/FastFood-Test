@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuDashboardComponent } from './menu-dashboard.component';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('MenuDashboardComponent', () => {
   let component: MenuDashboardComponent;
@@ -8,7 +10,8 @@ describe('MenuDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuDashboardComponent]
+      imports: [MenuDashboardComponent],
+      providers: [provideHttpClientTesting(), provideHttpClient()]
     })
     .compileComponents();
 
