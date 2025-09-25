@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CartStore } from '../services/cart.store';
 import { OrderService } from '../../../services/api/order/order.service';
 
@@ -9,6 +9,8 @@ import { OrderService } from '../../../services/api/order/order.service';
   styleUrl: './menu-summary.component.scss'
 })
 export class MenuSummaryComponent {
+  @Output() pedidoRealizado = new EventEmitter<void>();
+
   constructor(public cart: CartStore, private orderService: OrderService){}
 
   realizarPedido() {
@@ -19,7 +21,7 @@ export class MenuSummaryComponent {
 
     this.orderService.createOrder(items).subscribe({
       next: (order) => {
-        console.log('Pedido creado:', order);
+        this.pedidoRealizado.emit(); // avisa al dashboard
       },
       error: (err) => console.error('Error al crear pedido', err)
     });

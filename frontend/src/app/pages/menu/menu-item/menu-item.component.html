@@ -3,7 +3,14 @@
 
   <div class="menu-item__content">
     <header class="menu-item__header">
-      <button class="menu-item__btn menu-item__btn--decrease" (click)="remove()">-</button>
+      <button
+        class="menu-item__btn menu-item__btn--decrease"
+        [class.menu-item__btn--inactive]="quantity() === 0"
+        [disabled]="quantity() === 0"
+        (click)="remove()"
+      >
+        -
+      </button>
       <button class="menu-item__btn menu-item__btn--increase" (click)="add()">+</button>
     </header>
 

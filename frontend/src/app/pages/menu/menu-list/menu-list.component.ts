@@ -23,7 +23,7 @@ export class MenuListComponent implements OnInit{
   ngOnInit(): void {
     this.menuService.getMenu().subscribe({
       next: (data) => {
-        this.dishes = [...data, ...data, ...data];
+        this.dishes = [...data];
         this.totalPages = Math.ceil(this.dishes.length / this.pageSize);
         this.updatePagedDishes();
       },

@@ -1,11 +1,18 @@
 <div class="menu-dashboard">
-  <!-- Listado de platos -->
-  <section class="menu-dashboard__list">
-    <app-menu-list></app-menu-list>
-  </section>
+  @if (!pedidoRealizado()) {
+    <!-- Listado de platos -->
+    <section class="menu-dashboard__list">
+      <app-menu-list></app-menu-list>
+    </section>
 
-  <!-- Resumen del pedido -->
-  <aside class="menu-dashboard__summary">
-    <app-menu-summary></app-menu-summary>
-  </aside>
+    <!-- Resumen del pedido -->
+    <aside class="menu-dashboard__summary">
+      <app-menu-summary (pedidoRealizado)="onPedidoRealizado()"></app-menu-summary>
+    </aside>
+  } @else {
+    <div class="pedido-confirmacion">
+      <img src="/assets/images/pedido_ok.png" alt="Pedido realizado" class="pedido-confirmacion__img" />
+      <button class="pedido-confirmacion__btn" (click)="nuevoPedido()">Hacer otro pedido</button>
+    </div>
+  }
 </div>

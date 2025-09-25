@@ -46,11 +46,15 @@
     color: white;
 
     &--decrease {
-      background: #DCBDA5;
+      background: #C07531;
     }
 
     &--increase {
       background: #C07531;
+    }
+
+    &--inactive{
+      background: #DCBDA5;
     }
   }
 
