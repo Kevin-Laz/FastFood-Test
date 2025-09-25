@@ -1,0 +1,27 @@
+.paginator {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #c1732e;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:disabled {
+      background: #ddd;
+      color: #888;
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    font-weight: 500;
+    color: #333;
+  }
+}
