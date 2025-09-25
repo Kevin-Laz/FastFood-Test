@@ -1,0 +1,38 @@
+<div class="order-list">
+  <h2 class="order-list__title">Órdenes en cocina</h2>
+
+  <table class="order-list__table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Productos</th>
+        <th>Total (S/.)</th>
+        <th>Estado</th>
+        <th>Hora</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (order of orders; track $index) {
+        <tr>
+          <td>{{ order.id }}</td>
+          <td>
+            <ul>
+              @for (item of order.items; track $index) {
+                <li>
+                  {{ item.name }} (x{{ item.quantity }})
+                </li>
+              }
+            </ul>
+          </td>
+          <td>{{ order.total }}</td>
+          <td>
+            <span class="status" [ngClass]="order.status.toLowerCase()">
+              {{ order.status }}
+            </span>
+          </td>
+          <td>{{ order.createdAt | date:'shortTime' }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

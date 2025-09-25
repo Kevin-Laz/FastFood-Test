@@ -2,6 +2,7 @@ import { OrderStatus } from "./enums";
 
 export interface OrderItem {
   productId: number;
+  name: string;
   quantity: number;
 }
 
