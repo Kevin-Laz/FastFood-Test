@@ -5,18 +5,18 @@ import { AppError } from "../errors/AppError";
 
 const FILE_NAME = "menu.json";
 
-export const getMenu = (_req: Request, res: Response, next: NextFunction) => {
+export const getMenu = async (_req: Request, res: Response, next: NextFunction) => {
   try {
-    const menu = readJSON<MenuItem[]>(FILE_NAME);
+    const menu = await readJSON<MenuItem[]>(FILE_NAME);
     res.json(menu);
   } catch (error) {
     next(error);
   }
 };
 
-export const addMenuItem = (req: Request, res: Response, next: NextFunction) => {
+export const addMenuItem = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const menu = readJSON<MenuItem[]>(FILE_NAME);
+    const menu = await readJSON<MenuItem[]>(FILE_NAME);
 
     const newItem: MenuItem = {
       id: menu.length > 0 ? menu[menu.length - 1].id + 1 : 1,
@@ -34,9 +34,9 @@ export const addMenuItem = (req: Request, res: Response, next: NextFunction) => 
   }
 };
 
-export const updateMenuItem = (req: Request, res: Response, next: NextFunction) => {
+export const updateMenuItem = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const menu = readJSON<MenuItem[]>(FILE_NAME);
+    const menu = await readJSON<MenuItem[]>(FILE_NAME);
     const itemId = parseInt(req.params.id, 10);
     const index = menu.findIndex((item) => item.id === itemId);
 
@@ -53,9 +53,9 @@ export const updateMenuItem = (req: Request, res: Response, next: NextFunction) 
   }
 };
 
-export const deleteMenuItem = (req: Request, res: Response, next: NextFunction) => {
+export const deleteMenuItem = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const menu = readJSON<MenuItem[]>(FILE_NAME);
+    const menu = await readJSON<MenuItem[]>(FILE_NAME);
     const itemId = parseInt(req.params.id, 10);
     const newMenu = menu.filter((item) => item.id !== itemId);
 
