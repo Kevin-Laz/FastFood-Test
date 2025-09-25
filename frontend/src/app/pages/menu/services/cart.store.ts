@@ -29,6 +29,12 @@ export class CartStore {
     }
   }
 
+  getQuantity(item: MenuItem): number {
+    const found = this._items().find(ci => ci.item.name === item.name);
+    return found ? found.quantity : 0;
+  }
+
+
   removeItem(item: MenuItem) {
     this._items.update(list =>
       list
@@ -39,5 +45,9 @@ export class CartStore {
         )
         .filter(ci => ci.quantity > 0)
     );
+  }
+
+  clear() {
+    this._items.set([]);
   }
 }
