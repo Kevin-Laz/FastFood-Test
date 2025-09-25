@@ -1,0 +1,80 @@
+.menu-dashboard {
+  margin-top: 2rem;
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  //Responsive: en móvil
+  @media (max-width: 524px) {
+    height: 140vh;
+  }
+
+  &__list {
+    flex: 2;
+    max-width: 40rem;
+  }
+
+  &__summary {
+    margin-right: 0.5rem;
+    margin-top: 4rem;
+    width: 9rem;
+    background: #eadcccd4;
+    border-radius: 12px;
+    padding: 1rem;
+    color: #C07531;
+
+    @media (max-width: 524px) {
+      margin-top: 1rem;
+    }
+  }
+}
+
+//Responsive: en móvil el resumen pasa abajo
+@media (max-width: 524px) {
+  .menu-dashboard {
+    flex-direction: column;
+
+    &__list,
+    &__summary {
+      width: 80%;
+    }
+  }
+}
+
+.pedido-confirmacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  color: #2e2e2e;
+
+  &__img {
+    width: 400px;
+    height: auto;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  &__btn {
+    background: #c07531;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #a65c27;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}

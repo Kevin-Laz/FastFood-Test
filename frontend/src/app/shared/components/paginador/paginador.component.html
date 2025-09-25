@@ -1,0 +1,12 @@
+<div class="paginator">
+  @if(totalPages !== 1){
+    <button (click)="prevPage()" [disabled]="currentPage === 1">
+      ←
+    </button>
+
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      →
+    </button>
+  }
+
+</div>
