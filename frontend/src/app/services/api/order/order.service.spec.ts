@@ -66,7 +66,7 @@ describe('OrderService', () => {
   });
 
   it('should create an order', () => {
-    const items: OrderItem[] = [{ productId: 1, quantity: 2 }];
+    const items: OrderItem[] = [{ productId: 1, quantity: 2, name: 'hamburguesa' }];
     const newOrder: Order = {
       id: 3,
       items,

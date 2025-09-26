@@ -1,77 +1,103 @@
-# 🍔 FastFood Orders App
+# FastFood Orders App
 
-Una aplicación **SPA** para gestionar pedidos en un restaurante de comida rápida, diseñada para **tabletas** con una interfaz táctil, sencilla y eficiente. 🚀  
-
----
-
-## 📋 Descripción
-
-Este proyecto tiene como objetivo construir una aplicación para tomar pedidos en restaurantes de comida rápida utilizando **tablets**.  
-El sistema permite mostrar el menú, agregar productos al pedido, ver el resumen y enviar los pedidos a la cocina de forma rápida y clara.  
+Monorepo del proyecto **FastFood Orders App**, una aplicación SPA para gestionar pedidos en restaurantes de comida rápida.  
+Incluye **frontend (Angular)** y **backend (Express con TypeScript)**.
 
 ---
 
-## ✅ Requerimientos
+## Estructura del repositorio
 
-- 📖 **Mostrar menú** con los productos disponibles.  
-- ➕ **Agregar productos** al pedido.  
-- 🧾 **Ver resumen** con total y productos seleccionados.  
-- 🍳 **Enviar pedido** a la cocina.  
-
----
-
-## 🎯 Objetivos
-
-### 👨‍💻 Interfaz
-- Ingreso de pedidos con visualización del menú.  
-- Resumen del pedido con total.  
-- Visualización de pedidos en cocina.  
-- Menú categorizado con nombre y precio.  
-
-### ⚙️ Funcionalidades
-- 📱 **Responsive** optimizado para tablets.  
-- 👆 **Botones grandes y táctiles** para pantallas touch.  
+```
+FastFood-Test/
+├── backend/   # API REST con Express + TypeScript
+├── frontend/  # SPA con Angular
+```
 
 ---
 
-## 🛠️ Desarrollo
+## Características
 
-- Aplicación **SPA** con **React, Vue o Angular**.  
-- Backend: **Node.js, PHP o Firebase, Backend de preferencia**.  
-- Almacenamiento: archivo **JSON** (si no es necesaria persistencia permanente).  
+- **Frontend (Angular):**
+  - Vista de menú con paginación.
+  - Resumen de pedido en tiempo real.
+  - Login con roles (admin / cook).
+  - Interfaz optimizada para tablets.
 
----
-
-## 📦 Entregables
-
-- 📌 Código subido a **GitHub** (Fork del proyecto).  
-- 🌐 Deploy en **GitHub Pages, Vercel o Netlify**.  
-- 📝 Archivo `README.md` con instrucciones de instalación y uso.  
-
-⚠️ **Nota importante:**  
-No es necesario completar la prueba al **100%**. Se evaluará sobre todo:  
-- 💡 El desempeño.  
-- 🙌 Las ganas y la intención.  
-- ⚙️ El avance logrado hasta el momento.  
+- **Backend (Express + TypeScript):**
+  - API REST con autenticación.
+  - Manejo de pedidos, menú y usuarios.
+  - Errores personalizados con AppError.
+  - Persistencia inicial con JSON (JSONBin o local).
 
 ---
 
-## 🧪 Evaluación
+## Acceso y roles
 
-### 🔹 Funcionalidad
-- Agregar productos, ver total y enviar a cocina.  
-- Responsive en tablets.  
+Accede al login en la ruta:
 
-### 🔹 Código
-- Código **organizado** y **estructurado** en JavaScript.  
+```
+/login
+```
 
-### 🔹 Usabilidad
-- Interfaz simple y atractiva.  
-- Botones grandes y fáciles de usar en pantallas táctiles.  
+### Cook (cocinero)
+- Usuario: `chef`
+- Contraseña: `123456`
+
+### Admin
+- Usuario: `admin`
+- Contraseña: `admin`
+
 ---
 
-## 🚀 Instalación y Uso
+## Flujo de navegación
 
-1. Clona el repositorio:  
+- Menú principal (`/`): disponible sin login.  
+- Resumen del pedido: se actualiza en tiempo real.  
+- Enviar pedido: disponible desde el resumen (requiere login).  
+- Vista de cocina (`/kitchen`): requiere autenticación. Aquí se listan los pedidos enviados.  
+
+Si intentas acceder a `/kitchen` sin iniciar sesión, serás redirigido a `/login`.  
+
+---
+
+## Instalación
+
+1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/fastfood-orders.git
+   git clone https://github.com/Kevin-Laz/FastFood-Test.git
+   cd FastFood-Test
+   ```
+
+2. Instalar dependencias en cada proyecto:
+   ```bash
+   cd backend && npm install
+   cd ../frontend && npm install
+   ```
+
+---
+
+## Desarrollo
+
+- **Backend (Express + TypeScript):**
+  ```bash
+  cd backend
+  npm run dev
+  ```
+  Disponible en `http://localhost:3000`.
+
+- **Frontend (Angular):**
+  ```bash
+  cd frontend
+  npm start
+  ```
+  Disponible en `http://localhost:4200`.
+
+---
+
+## Deploy
+
+- Frontend: [fast-food-frontend.vercel.app](https://fast-food-frontend.vercel.app)  
+- Backend: [fast-food-backend-two.vercel.app](https://fast-food-backend-two.vercel.app)
+
+---
+

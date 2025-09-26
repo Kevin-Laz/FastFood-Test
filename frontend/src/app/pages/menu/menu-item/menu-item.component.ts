@@ -12,7 +12,7 @@ export class MenuItemComponent {
   @Input() category = 'Categoria';
   @Input() price = 11;
   @Input() id = -1;
-  @Input() img? = '/assets/images/example_burger.png';
+  @Input() img? = '';
 
   constructor(private cart: CartStore){}
 
@@ -21,10 +21,10 @@ export class MenuItemComponent {
   ); // Si la cantidad es menor a 1 entonces el boton remove debe estar desactivado
 
   add() {
-    this.cart.addItem({ id: 1,name: this.name, category: this.category, price: this.price });
+    this.cart.addItem({ id: this.id ,name: this.name, category: this.category, price: this.price });
   }
 
   remove() {
-    this.cart.removeItem({ id: 1,name: this.name, category: this.category, price: this.price });
+    this.cart.removeItem({ id: this.id ,name: this.name, category: this.category, price: this.price });
   }
 }

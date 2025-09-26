@@ -4,6 +4,11 @@ export interface OrderItem {
   quantity: number;
 }
 
+export interface CreateOrderItem {
+  productId: number;
+  quantity: number;
+}
+
 export interface Order {
   id: number;
   items: OrderItem[];

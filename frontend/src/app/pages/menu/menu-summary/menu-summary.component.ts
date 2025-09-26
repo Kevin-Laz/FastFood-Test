@@ -16,7 +16,6 @@ export class MenuSummaryComponent {
   realizarPedido() {
     const items = this.cart.items().map(ci => ({
       productId: ci.item.id,
-      name: ci.item.name,
       quantity: ci.quantity
     }));
 
