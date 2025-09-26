@@ -2,19 +2,78 @@
   {
     "id": 1,
     "name": "Hamburguesa",
-    "price": 12.5,
-    "category": "burgers"
+    "price": 12,
+    "category": "burgers",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/burger-preview.png"
   },
   {
     "id": 2,
     "name": "Papas Fritas",
     "price": 5,
-    "category": "sides"
+    "category": "sides",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/fries-preview.png"
   },
   {
     "id": 3,
     "name": "Gaseosa",
     "price": 3,
-    "category": "drinks"
+    "category": "drinks",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/soda-preview.png"
+  },
+  {
+    "id": 4,
+    "name": "Cheeseburger",
+    "price": 14,
+    "category": "burgers",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/chess-burger-preview.png"
+  },
+  {
+    "id": 5,
+    "name": "Hot Dog",
+    "price": 8,
+    "category": "sides",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/hod-dog-preview.png"
+  },
+  {
+    "id": 6,
+    "name": "Nuggets",
+    "price": 10,
+    "category": "sides",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/nugget-preview.png"
+  },
+  {
+    "id": 7,
+    "name": "Ensalada",
+    "price": 9,
+    "category": "salads",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/salad-preview.png"
+  },
+  {
+    "id": 8,
+    "name": "Pizza",
+    "price": 18,
+    "category": "pizzas",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/pizza-preview.png"
+  },
+  {
+    "id": 9,
+    "name": "Wrap",
+    "price": 11,
+    "category": "wraps",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/wrap-preview.png"
+  },
+  {
+    "id": 10,
+    "name": "Agua",
+    "price": 2,
+    "category": "drinks",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/water-preview.png"
+  },
+  {
+    "id": 11,
+    "name": "Milkshake",
+    "price": 7,
+    "category": "desserts",
+    "img": "https://fast-food-frontend.vercel.app/assets/images/milk-shake-preview.png"
   }
 ]
