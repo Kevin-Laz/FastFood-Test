@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { KitchenDashboardComponent } from './kitchen-dashboard.component';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('KitchenDashboardComponent', () => {
   let component: KitchenDashboardComponent;
@@ -8,7 +10,9 @@ describe('KitchenDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [KitchenDashboardComponent]
+      imports: [KitchenDashboardComponent],
+      providers: [provideHttpClient(),
+        provideHttpClientTesting()]
     })
     .compileComponents();
 
