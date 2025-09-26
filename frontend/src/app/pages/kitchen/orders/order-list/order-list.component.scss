@@ -1,0 +1,98 @@
+.order-list {
+  margin-top: 2rem;
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    color: #C07531;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    th,
+    td {
+      padding: 0.9rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #f0e6dd;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #fdf5ed;
+      font-weight: 700;
+      color: #8b4202;
+      text-transform: uppercase;
+      letter-spacing: 0.03rem;
+      font-size: 0.85rem;
+    }
+
+    tr:hover {
+      background: #fffaf6;
+      transition: background 0.2s ease-in-out;
+    }
+
+    // Estado del pedido
+    .status {
+      display: inline-block;
+      min-width: 6rem;
+      text-align: center;
+      padding: 0.4rem 0.7rem;
+      border-radius: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: capitalize;
+
+      &.pending {
+        background: #fff3cd;
+        color: #856404;
+      }
+      &.in_progress {
+        background: #cce5ff;
+        color: #004085;
+      }
+      &.completed {
+        background: #d4edda;
+        color: #155724;
+      }
+    }
+
+    // Ajuste para listas de productos
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      li {
+        list-style-type: none;
+        font-size: 0.9rem;
+        color: #5c3b1e;
+        font-weight: 500;
+      }
+    }
+  }
+
+  // Responsive: tabla scrollable en móvil
+  @media (max-width: 768px) {
+    &__table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      font-size: 0.85rem;
+
+      th,
+      td {
+        padding: 0.6rem 0.8rem;
+      }
+    }
+  }
+}

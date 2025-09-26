@@ -3,6 +3,7 @@ import { MenuItemComponent } from "../menu-item/menu-item.component";
 import { PaginadorComponent } from '../../../shared/components/paginador/paginador.component';
 import { MenuItem } from '../../../models/menu.model';
 import { MenuService } from '../../../services/api/menu/menu.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-list',
@@ -18,7 +19,7 @@ export class MenuListComponent implements OnInit{
   totalPages = 1;
   readonly pageSize = 6;
 
-  constructor(private menuService: MenuService) {}
+  constructor(private menuService: MenuService, private router: Router) {}
 
   ngOnInit(): void {
     this.menuService.getMenu().subscribe({
@@ -40,5 +41,9 @@ export class MenuListComponent implements OnInit{
     const start = (this.page - 1) * this.pageSize;
     const end = start + this.pageSize;
     this.pagedDishes = this.dishes.slice(start, end);
+  }
+
+  goToLogin() {
+    this.router.navigate(['/login']);
   }
 }

@@ -55,7 +55,7 @@ export const createOrder = async (req: Request, res: Response, next: NextFunctio
       }
 
       total += product.price * item.quantity;
-      return { productId: product.id, quantity: item.quantity };
+      return { productId: product.id, name: product.name , quantity: item.quantity };
     });
 
     const newOrder: Order = {

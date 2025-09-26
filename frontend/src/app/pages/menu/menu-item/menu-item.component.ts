@@ -12,6 +12,7 @@ export class MenuItemComponent {
   @Input() category = 'Categoria';
   @Input() price = 11;
   @Input() id = -1;
+  @Input() img? = '/assets/images/example_burger.png';
 
   constructor(private cart: CartStore){}
 

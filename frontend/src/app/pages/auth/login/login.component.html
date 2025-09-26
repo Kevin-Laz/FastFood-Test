@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="login">
+  <h2>Iniciar sesión</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label>
+      Usuario
+      <input type="text" formControlName="username" />
+    </label>
+    <label>
+      Contraseña
+      <input type="password" formControlName="password" />
+    </label>
+
+    <button type="submit" [disabled]="loading || loginForm.invalid">
+      {{ loading ? 'Ingresando...' : 'Ingresar' }}
+    </button>
+  </form>
+
+  @if(errorMessage){
+    <p class="error">{{ errorMessage }}</p>
+  }
+</div>
