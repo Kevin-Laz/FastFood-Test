@@ -23,6 +23,7 @@ export const addMenuItem = async (req: Request, res: Response, next: NextFunctio
       name: req.body.name,
       price: req.body.price,
       category: req.body.category,
+      img: req.body.img
     };
 
     menu.push(newItem);
